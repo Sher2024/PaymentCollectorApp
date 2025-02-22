@@ -1,0 +1,195 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0; /* Removed padding */
+}
+
+.container {
+    background: white;
+    padding: 30px; /* Increased padding */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Changed to 100% */
+    max-width: 100%; /* Changed to 100% */
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* Input & Button Styling */
+input, select, button {
+    width: 98%; /* Adjusted width */
+    max-width: 500px; /* Set a maximum width */
+    padding: 12px; /* Increased padding */
+    margin: 10px auto; /* Centered and added vertical margin */
+    border-radius: 5px;
+    border: 2px solid #007bff; /* Bolder border */
+    font-size: 16px;
+    display: block; /* Ensure block display */
+}
+
+.target-section label {
+    font-size: 16px;
+    color: #333; /* Ensure the font color is visible */
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, select {
+    border: 2px solid #007bff; /* Bolder border */
+}
+
+button {
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+#addPayer {
+    background: #28a745; /* Green */
+    border: none; /* Remove border */
+}
+
+#editPayer {
+    background: #007bff; /* Blue */
+    border: none; /* Remove border */
+}
+
+#deletePayer {
+    background: #dc3545; /* Red */
+    border: none; /* Remove border */
+}
+
+#setTarget {
+    background: #007bff; /* Blue */
+    color: white; /* Ensure the text color is white */
+}
+
+/* Table Styling */
+.list-section {
+    margin-top: 30px; /* Increased margin-top */
+    overflow-x: auto; /* Enable horizontal scrolling */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+th {
+    background: #007bff;
+    color: white;
+}
+
+tr:hover {
+    background: #e9f7fe;
+}
+
+/* Balance/Change Styling */
+.balance {
+    color: red;
+    font-weight: bold;
+}
+
+.change {
+    color: green;
+    font-weight: bold;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Pop-up Message Styling */
+.popup-message {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #28a745; /* Green for success */
+    color: white;
+    padding: 10px; /* Reduced padding */
+    border-radius: 5px; /* Reduced border-radius */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    z-index: 1000;
+    font-size: 14px; /* Reduced font size */
+    display: none; /* Hidden by default */
+}
+
+.popup-message.show {
+    display: block; /* Show when active */
+}
+
+.popup-message.error {
+    background: #dc3545; /* Red for error */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    input, select, button {
+        font-size: 14px;
+        padding: 10px; /* Adjusted padding for smaller screens */
+    }
+
+    th, td {
+        padding: 8px;
+    }
+
+    #editPayer, #deletePayer {
+        width: 100%; /* Make buttons full width */
+        margin-top: 5px; /* Add margin between buttons */
+    }
+
+    .popup-message {
+        width: 90%; /* Adjust width for smaller screens */
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 10px; /* Adjust bottom position */
+    }
+}
